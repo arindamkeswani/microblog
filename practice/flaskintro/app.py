@@ -11,22 +11,12 @@ from jinja2 import Template
 
 app = Flask(__name__) #dunder name, always unique
 
-#telling the app to register the end point
-# @app.route("/") 
-# def hello_world():
-#     return render_template(
-#         "jinja_intro.html",
-#         name="Arindam",
-#         language_name = "Jinja2")
-
-# #will give error
-# @app.route("/hello") 
-# def hello_page():
-#     return "Hello page!"
-
-# @app.route("/webpage") 
-# def hello_html():
-#     return render_template("index2.html")
+class Planets:
+    def __init__(self, first, second, third, fourth):
+        self.first = first
+        self.second = second
+        self.third = third
+        self.fourth = fourth
 
 @app.route("/expressions/")
 def expressions():
@@ -66,3 +56,27 @@ def expressions():
     }
 
     return render_template("jinja_intro.html", **kwargs)
+
+@app.route('/data-structures/')
+def render_data_structures():
+    movies=[
+        "Shawshank Redemption",
+        "Spider-man: No way home",
+        "Avengers: Endgame"
+    ]
+
+    car={
+        "brand":"Nissan",
+        "model":"President",
+        "year":"1992"
+    }
+
+    planets = Planets("Mercury", "Venus", "Earth","Mars")
+    # return render_template("data_structures.html", movies=movies, car=car, planets=planets)
+
+    kwargs={
+        "movies":movies,
+        "car":car,
+        "planets":planets
+    }
+    return render_template("data_structures.html", **kwargs)
