@@ -5,7 +5,7 @@
 # export FLASK_ENV=development
 # flask run
 
-from flask import Flask 
+from flask import Flask, render_template
 #flask class from flask package
 
 app = Flask(__name__) #dunder name, always unique
@@ -13,7 +13,7 @@ app = Flask(__name__) #dunder name, always unique
 #telling the app to register the end point
 @app.route("/") 
 def hello_world():
-    return "Hello, developer!"
+    return render_template("index.html")
 
 #will give error
 @app.route("/hello") 
@@ -22,11 +22,4 @@ def hello_page():
 
 @app.route("/webpage") 
 def hello_html():
-    return """
-        <html>
-            <body>
-                <h1>Greetings!</h1>
-                <p>paragraph<p>
-            </body>
-        </html>
-    """
+    return render_template("index2.html")
