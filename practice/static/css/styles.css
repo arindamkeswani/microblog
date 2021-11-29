@@ -1,5 +1,7 @@
 html {
   font-family: Lato, sans-serif;
+  background-color: #1f1b2c;
+  color: #f1eef9;
 }
 
 *,
@@ -75,13 +77,15 @@ body {
   width: inherit;
   font-size: 18px;
   padding: 12px 20px;
-  border: none;
-  background-color: #f3f6f6;
+  border: 2px;
+  color: #f1eef9;
+  border-color: #e2e8f0;
+  background-color: #2e2d44;
   margin-bottom: 10px;
 }
 
 .form__submit {
-  background-color: #3cd0ff;
+  background-color: #2e2d44;
   border: none;
   font-size: 18px;
   font-weight: bold;
@@ -92,7 +96,7 @@ body {
 }
 
 .form__submit:hover {
-  background-color: #18c1e1;
+  background-color: #3959a0;
 }
 
 .entry {
@@ -114,7 +118,7 @@ body {
 }
 
 .footer {
-  background-color: #323f43;
+  background-color: #2e2d44;
   padding: 40px 0;
   margin-top: 50px;
   border-top: 4px solid black;
