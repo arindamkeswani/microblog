@@ -101,12 +101,12 @@ def render_loops_for():
     ]
     return render_template("for_loop.html", planets=planets)
 
-# @app.route('/for-loop/conditionals/')
-# def render_for_loops_conditionals():
-#     department_os = {
-#         "Frontend": "MAC OS",
-#         "Backend": "Linux",
-#         "Database": "Windows"
-#     }
+@app.route('/for-loop/conditionals/')
+def render_for_loops_conditionals():
+    department_os = {
+        "Frontend": "MacOS",
+        "Backend": "Linux",
+        "Database": "Windows"
+    }
 
-#     return render_template("loops_and_conditionals.html", department_os=department_os)
+    return render_template("loops_and_conditionals.html", department_os=department_os)
