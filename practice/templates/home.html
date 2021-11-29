@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microblog</title>
+  <title>PepBlog</title>
   <link rel="stylesheet" href="/static/css/styles.css" />
 </head>
+
 <body>
   <header class="navbar">
     <div class="navbar__brand">
-      <img class="navbar__logo" src="/static/logo.svg" alt="The Microblog logo" />Microblog
+      <img class="navbar__logo" src="/static/logo.svg" alt="The PepBlog logo" />PepBlog
     </div>
     <ul class="navbar__navigation">
       <li class="navbar__navigation-item">
@@ -34,23 +36,23 @@
     <section>
       <h1>Recent posts</h1>
       {% for entry in entries %}
-        <article class="entry">
-          <div>
-            <h2 class="entry__title">{{ entry[0] | truncate(30, true) }}</h2>
-            <time class="entry__date" datetime="{{ entry[1] }}">• {{ entry[2] }}</time>
-          </div>
-          <p class="entry__content">
-            {{ entry[0] }}
-          </p>
-        </article>
+      <article class="entry">
+        <div>
+          <h2 class="entry__title">{{ entry[0] | truncate(30, true) }}</h2>
+          <time class="entry__date" datetime="{{ entry[1] }}">• {{ entry[2] }}</time>
+        </div>
+        <p class="entry__content">
+          {{ entry[0] }}
+        </p>
+      </article>
       {% endfor %}
     </section>
   </main>
   <footer class="footer">
     <div class="footer__content">
       <section class="left">
-        <a class="footer__item">Made by Jose Salvatierra</a>
-        <a class="footer__item">Check out my other projects</a>
+        <a class="footer__item">Made by Pepcoders</a>
+        <a class="footer__item">For Pepcoders</a>
       </section>
       <section class="right">
         <div class="footer__column">
@@ -65,4 +67,5 @@
     </div>
   </footer>
 </body>
+
 </html>

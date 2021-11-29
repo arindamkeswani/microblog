@@ -29,6 +29,7 @@ body {
 }
 
 .navbar__logo {
+  height:65px;
   margin-right: 30px;
 }
 
