@@ -86,3 +86,27 @@ def render_conditionals():
     course = "Backend"
     company = ""
     return render_template("conditionals.html", course = course, company=company)
+
+@app.route('/for-loop/')
+def render_loops_for():
+    planets=[
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune"
+    ]
+    return render_template("for_loop.html", planets=planets)
+
+# @app.route('/for-loop/conditionals/')
+# def render_for_loops_conditionals():
+#     department_os = {
+#         "Frontend": "MAC OS",
+#         "Backend": "Linux",
+#         "Database": "Windows"
+#     }
+
+#     return render_template("loops_and_conditionals.html", department_os=department_os)
