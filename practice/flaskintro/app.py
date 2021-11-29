@@ -80,3 +80,9 @@ def render_data_structures():
         "planets":planets
     }
     return render_template("data_structures.html", **kwargs)
+
+@app.route('/conditionals-basics/')
+def render_conditionals():
+    course = "Backend"
+    company = ""
+    return render_template("conditionals.html", course = course, company=company)
