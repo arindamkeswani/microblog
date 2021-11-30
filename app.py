@@ -3,9 +3,14 @@ from logging import Formatter
 from flask import Flask, render_template, request
 from pymongo import MongoClient #to open up client side session
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 def create_app():
     app = Flask(__name__)
-    client = MongoClient("mongodb+srv://admin:admin@cluster0.gj9mz.mongodb.net/test")
+    client = MongoClient(os.environ.get("MONGODB_URI"))
     app.db = client.pepBlog
 
     entries=[]
