@@ -100,7 +100,11 @@ body {
 }
 
 .entry {
-  margin-top: 50px;
+  margin-top: 30px;
+  border: 2px solid;
+  border-color: #e2e8f0;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .entry__title {
